@@ -1,4 +1,4 @@
-# 🧠 L.U.M.I - Logical Utility Machine Intelligence
+# L.U.M.I - Logical Utility Machine Intelligence
 
 <p align="center">
   <img src="gui/assets/logo.png" alt="L.U.M.I Logo" width="120" height="120">
@@ -6,32 +6,31 @@
 
 **L.U.M.I** (Logical Utility Machine Intelligence) is a **fully local, privacy-focused AI assistant** for Windows. It combines a beautiful modern GUI with powerful voice control capabilities—all running entirely on YOUR computer with no cloud dependency.
 
-> 🔒 **Your data stays on your machine.** No API keys required for core functionality. No subscriptions. No data collection.
+> **Your data stays on your machine.** No API keys required for core functionality. No subscriptions. No data collection.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 | Feature | Description |
 |---------|-------------|
-| 🎤 **Voice Control** | Wake word detection ("Lumi") with natural language commands |
-| 💬 **AI Chat** | Interactive chat with local LLMs via Ollama with streaming responses |
-| 🏠 **Smart Home** | Control TP-Link Kasa smart lights and plugs from the app |
-| 📅 **Planner** | Manage calendar events, alarms, and timers |
-| 📰 **Daily Briefing** | AI-curated news from Technology, Science, and Top Stories |
-| 🌤️ **Weather** | Current weather and hourly forecast on your dashboard |
-| 🔍 **Web Search** | Search the web through voice or chat commands |
-| 🖥️ **System Monitor** | Real-time CPU and memory usage in the title bar |
+| **Voice Control** | Wake word detection ("Lumi") with natural language commands |
+| **AI Chat** | Interactive chat with local LLMs via Ollama with streaming responses |
+| **Planner** | Manage calendar events, alarms, and timers |
+| **Daily Briefing** | AI-curated news from Technology, Science, and Top Stories |
+| **Weather** | Current weather and hourly forecast on your dashboard |
+| **Web Search** | Search the web through voice or chat commands |
+| **System Monitor** | Real-time CPU and memory usage in the title bar |
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 *The application features a sleek Windows 11 Fluent Design aesthetic with dark mode support.*
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before you begin, make sure you have:
 
@@ -51,7 +50,7 @@ Before you begin, make sure you have:
 
 ---
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 
 Follow these steps to get L.U.M.I running on your system.
 
@@ -66,25 +65,25 @@ Follow these steps to get L.U.M.I running on your system.
 1. Download and install from [ollama.com/download](https://ollama.com/download)
 2. Run the installer (Ollama will start automatically as a background service)
 
-> ✅ **Ollama runs in the background** - no need to start it manually after installation.
+> **Ollama runs in the background** - no need to start it manually after installation.
 
 ### Step 3: Download an AI Model
 
 Open a terminal and pull your preferred model. You can choose from:
 
-**🔹 Option A: Qwen3 (Recommended for most users)**
+** Option A: Qwen3 (Recommended for most users)**
 ```bash
 # Fast and efficient - great balance of speed and quality
 ollama pull qwen3:1.7b
 ```
 
-**🔹 Option B: DeepSeek R1 (Better reasoning)**
+** Option B: DeepSeek R1 (Better reasoning)**
 ```bash
 # Stronger reasoning capabilities - slightly slower
 ollama pull deepseek-r1:1.5b
 ```
 
-> 💡 **Tip**: You can switch models anytime in `config.py` by changing `RESPONDER_MODEL`.
+> **Tip**: You can switch models anytime in `config.py` by changing `RESPONDER_MODEL`.
 
 Verify your model is installed:
 ```bash
@@ -108,7 +107,7 @@ conda activate lumi
 pip install -r requirements.txt
 ```
 
-> ⏱️ **Note**: First installation may take 5-10 minutes as PyTorch and other large packages are downloaded.
+> **Note**: First installation may take 5-10 minutes as PyTorch and other large packages are downloaded.
 
 ### Step 5: GPU Setup (NVIDIA Users)
 
@@ -124,7 +123,7 @@ Verify CUDA is working:
 python -c "import torch; print(f'CUDA available: {torch.cuda.is_available()}')"
 ```
 
-> 💡 **CPU-only users**: Skip this step—PyTorch will use CPU by default. It's slower but works fine.
+> **CPU-only users**: Skip this step—PyTorch will use CPU by default. It's slower but works fine.
 
 ### Step 6: Run the Application
 
@@ -132,11 +131,11 @@ python -c "import torch; print(f'CUDA available: {torch.cuda.is_available()}')"
 python main.py
 ```
 
-🎉 **That's it!** L.U.M.I will launch with a beautiful GUI.
+**That's it!** L.U.M.I will launch with a beautiful GUI.
 
 ---
 
-## 🎮 GPU Acceleration
+## GPU Acceleration
 
 L.U.M.I benefits greatly from GPU acceleration. Here's what runs on your GPU:
 
@@ -161,7 +160,7 @@ nvidia-smi
 
 ---
 
-## 🤖 Automatic Model Downloads
+## Automatic Model Downloads
 
 The following models are **downloaded automatically** on first run—no manual setup required:
 
@@ -171,11 +170,11 @@ The following models are **downloaded automatically** on first run—no manual s
 | **TTS Voice** | Text-to-speech | ~50MB | [Piper Voices](https://huggingface.co/rhasspy/piper-voices) |
 | **STT Model** | Speech-to-text (Whisper) | ~150MB | OpenAI Whisper |
 
-> 📦 **First launch will take a few minutes** while these models download. Subsequent launches are instant.
+> **First launch will take a few minutes** while these models download. Subsequent launches are instant.
 
 ---
 
-## 🎙️ Voice Assistant Setup
+## Voice Assistant Setup
 
 L.U.M.I includes Alexa-like voice control with wake word detection.
 
@@ -189,7 +188,6 @@ L.U.M.I includes Alexa-like voice control with wake word detection.
 
 | Command | What It Does |
 |---------|--------------|
-| *"Lumi, turn on the office lights"* | Controls smart lights |
 | *"Lumi, set a timer for 10 minutes"* | Creates a countdown timer |
 | *"Lumi, what's on my schedule today?"* | Reads your calendar |
 | *"Lumi, search the web for Python tutorials"* | Performs web search |
@@ -212,7 +210,7 @@ VOICE_ASSISTANT_ENABLED = True
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 All configuration is centralized in `config.py`:
 
@@ -246,12 +244,28 @@ The default location is New York City. To change it:
 
 ---
 
-## 🔧 Troubleshooting
+## Future Improvements
+
+### The Better Solution: A "Single Installer"
+
+While bundling usage into a single portable `.exe` is possible, it is discouraged due to file size and performance issues. A massive single executable can lead to slow startup times and memory issues.
+
+The planned approach for distribution is a **Single Installer** (`Lumi_Setup.exe`):
+
+1.  **Installs the App**: Unpacks the lightweight Python interface to `Program Files`.
+2.  **Installs Ollama**: Silent-installs the bundled Ollama service if not already present.
+3.  **Deploys Models**: Copies the model files (`.gguf`) to the correct directory or downloads them on first run.
+
+This method ensures a professional, standard installation process that is stable and user-friendly.
+
+---
+
+## Troubleshooting
 
 ### Common Issues
 
 <details>
-<summary><strong>❌ Ollama connection refused</strong></summary>
+<summary><strong>Ollama connection refused</strong></summary>
 
 **Problem**: The app can't connect to Ollama.
 
@@ -263,7 +277,7 @@ The default location is New York City. To change it:
 </details>
 
 <details>
-<summary><strong>❌ CUDA/GPU not detected</strong></summary>
+<summary><strong>CUDA/GPU not detected</strong></summary>
 
 **Problem**: PyTorch is running on CPU instead of GPU.
 
@@ -277,7 +291,7 @@ The default location is New York City. To change it:
 </details>
 
 <details>
-<summary><strong>❌ Voice assistant not working</strong></summary>
+<summary><strong>Voice assistant not working</strong></summary>
 
 **Problem**: Wake word isn't being detected.
 
@@ -290,7 +304,7 @@ The default location is New York City. To change it:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Here's how to get started:
 
@@ -302,18 +316,17 @@ Contributions are welcome! Here's how to get started:
 
 ---
 
-## 📜 License
+## License
 
 This project is open source. See [LICENSE](LICENSE) for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Ollama](https://ollama.com/) - Local LLM inference
 - [QFluentWidgets](https://github.com/zhiyiYo/PyQt-Fluent-Widgets) - Beautiful UI components
 - [Piper TTS](https://github.com/rhasspy/piper) - Lightweight text-to-speech
-- [python-kasa](https://github.com/python-kasa/python-kasa) - Kasa device control
 - [RealTimeSTT](https://github.com/KoljaB/RealtimeSTT) - Speech recognition
 
 ---
